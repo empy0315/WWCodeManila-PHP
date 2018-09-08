@@ -20,3 +20,6 @@ Route::get('/create', 'PostController@create');
 Route::get('/post/{id}', 'PostController@showPost')
     ->name('post');
 Route::post('/store', 'PostController@store');
+Route::get('/edit/{id}', 'PostController@edit');
+Route::post('/edited/{id}', 'PostController@edited');
+Route::get('/delete/{id}', 'PostController@delete');

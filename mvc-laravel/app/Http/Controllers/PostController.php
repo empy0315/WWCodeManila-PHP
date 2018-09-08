@@ -50,4 +50,28 @@ class PostController extends Controller
         return view('posts.stored')
                 ->with('post', $post);
     }
+
+    public function edit($postId)
+    {
+        $post = Post::findOrFail($postId);
+        return view('posts.edit')
+                ->with('post', $post);
+    }
+    public function edited(Request $request)
+    {
+        $post = Post::findOrFail($request->postId);
+        $post->title = $request->postTitle;
+        $post->content = $request->postContent;
+        $post->save();
+
+        return redirect()
+            ->route('post', $post);
+    }
+        public function delete($postId)
+    {
+        $post = Post::findOrFail($postId);
+        $post->delete();
+        return view('welcome');
+    }
+
 }

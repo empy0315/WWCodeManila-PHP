@@ -4,7 +4,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://laravel.com/docs">Hello world</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="{{url('/posts')}}">Posts</a>
                     <a href="{{url('/create')}}">Create a Post</a>
